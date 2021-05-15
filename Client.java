@@ -47,46 +47,7 @@ class Client {
 		Files.write(Paths.get(outputFileName), output.getBytes("UTF-8"));
 		System.out.println("wrote output to " + outputFileName);
 
-		// second request:
-
-		// System.out.println("\n\nSENDING SECOND REQUEST\n\n");
-
-		// host = args[0];
-		// port = Integer.parseInt(args[1]);
-		// inputFileName = "sample_input/medium.txt";
-		// outputFileName = "myoutput.txt";
-
-		// // step 1: read graph into byte array
-		// input = new String(Files.readAllBytes(Paths.get(inputFileName)),
-		// StandardCharsets.UTF_8);
-		// System.out.println("read input from " + inputFileName);
-
-		// dout = new DataOutputStream(sock.getOutputStream());
-		// bytes = input.getBytes("UTF-8");
-		// startTime = System.currentTimeMillis();
-		// dout.writeInt(bytes.length);
-		// dout.write(bytes);
-		// dout.flush();
-		// System.out.println("sent request header and " + bytes.length + "bytes of
-		// payload data to server");
-
-		// // step 4: receive response from server
-		// din = new DataInputStream(sock.getInputStream());
-		// respDataLen = din.readInt();
-		// System.out.println("received response header, data payload has length " +
-		// respDataLen);
-		// bytes = new byte[respDataLen];
-		// din.readFully(bytes);
-		// endTime = System.currentTimeMillis();
-		// System.out.println(
-		// "received " + bytes.length + " bytes of payload data from server in " +
-		// (endTime - startTime) + "ms");
-		// output = new String(bytes, StandardCharsets.UTF_8);
-
-		// // // step 5: save to file
-		// Files.write(Paths.get(outputFileName), output.getBytes("UTF-8"));
-		// System.out.println("wrote output to " + outputFileName);
-
+		
 		// // step 6: clean up
 		System.err.println("Closing socket");
 		sock.close();
